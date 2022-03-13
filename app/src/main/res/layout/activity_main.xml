@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainLayout"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:weightSum="2"
+        android:orientation="vertical">
+
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:id="@+id/bottomLayout"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/grey_background"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/blue"
+                    android:layout_width="208dp"
+                    android:layout_height="256dp"
+                    android:background="@drawable/blue_container" />
+
+                <TextView
+                    android:id="@+id/timerTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="casual"
+                    android:paddingTop="10dp"
+                    android:layout_gravity="center"
+                    android:text="Time: 0"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/scoreTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Score: 0"
+                    android:layout_gravity="center"
+                    android:fontFamily="casual"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="30sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/red"
+                    android:layout_width="208dp"
+                    android:layout_height="256dp"
+                    android:background="@drawable/red_container" />
+
+                <com.efee.bombsort.ResetButton
+                    android:id="@+id/resetButton"
+                    android:text="Reset"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="casual"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
